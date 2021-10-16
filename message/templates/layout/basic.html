@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" /><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+
+		<link rel = "stylesheet" type = "text/css" href = "{% static 'message/style.css' %}">
+		<style>    
+			.menu {     
+				position: fixed; /* Фиксированное положение */     
+				right: 10px; /* Расстояние от правого края окна браузера */     
+				top: 20%; /* Расстояние сверху */     
+				padding: 10px; /* Поля вокруг текста */     
+				background: #ffe; /* Цвет фона */     
+				border: 1px solid #333; /* Параметры рамки */    
+			}    
+			.text {     
+				height: 1000px;    
+			}   
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>Фитнес</h1>
+		</header>
+		<nav>
+			{% block main %}
+			{% endblock %}
+		</nav>
+		<section>
+			{% block content %}
+			{% endblock %}
+		</section>
+	</body>
+</html>
+		
+
